@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main()
+{
+   int sc,mr;
+   float cn,amt,tamt,nu;
+   char nam[20];
+   
+      printf("Enter Consumer No:");
+      scanf("%f",&cn);
+      printf("Enter name:");
+      gets(nam);
+      printf("Enter Power consumed:");
+      scanf("%f",&nu);
+      
+      
+    
+    
+     if(nu<=200)
+       amt=0.80*nu;
+     else 
+        if(nu<=400)
+          amt=0.80*200+1.20*(nu-200);
+        else
+           if(nu<=800)
+             amt=0.80*200+1.20*200+2.50*(nu-400);
+            else
+               amt=0.80*200+1.20*200+2.50*400+4.25*(nu-800);
+               
+    sc=25;
+    mr=10;
+    tamt=amt+sc+mr;
+    printf("Total amount=Rs:%f\n",tamt);
+    
+    return 0;
+}
+    
+    
+      
+      
+      
+      
+      
+      
+      
