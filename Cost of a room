@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{  
+    int rt,nd,dr;
+    char nam[20];
+    float amt,famt,sc,tax,tamt; 
+    
+    
+          printf("Enter name:");
+          gets(nam);
+          printf("Enter type of room:");
+          scanf("%d",&rt);
+          printf("Enter no of days:");
+          scanf("%d",&nd);
+          
+          
+    if(rt==1)
+       dr=150;
+    if(rt==2)
+       dr=200;
+    if(rt==3)
+       dr=300;
+       
+       
+    sc=25;
+    amt=nd*dr;
+    tax=4.7/100;
+    tamt=tax*amt;
+    famt=amt+tamt+sc;
+    
+    printf("The final bill amount is Rs:%f only\n",famt);
+    return 0;
+}
+       
